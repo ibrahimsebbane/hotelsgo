@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Hotels Go',
       theme: ThemeData(
           colorScheme: ColorScheme.fromSwatch().copyWith(primary: Colors.green[800], secondary: Colors.blue[800]),

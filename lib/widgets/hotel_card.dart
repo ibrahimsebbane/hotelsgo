@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 class HotelCard extends StatelessWidget {
   final String label;
-  final double reviewScore;
   final String review;
-  final double price;
   final String link;
-  final int stars;
   final String address;
+  final int stars;
+  final double reviewScore;
+  final double price;
   final bool isLowestPrice;
+
   const HotelCard({
     required this.isLowestPrice,
     required this.label,
