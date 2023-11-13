@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustomModalBottomSheet extends StatefulWidget {
-  const CustomModalBottomSheet({super.key});
+class FiltersModalBottomSheet extends StatefulWidget {
+  const FiltersModalBottomSheet({super.key});
 
   @override
-  State<CustomModalBottomSheet> createState() => _CustomModalBottomSheetState();
+  State<FiltersModalBottomSheet> createState() => _FiltersModalBottomSheetState();
 }
 
-class _CustomModalBottomSheetState extends State<CustomModalBottomSheet> {
+class _FiltersModalBottomSheetState extends State<FiltersModalBottomSheet> {
   double priceLimit = 540;
   double selectedPrice = 540;
   @override
@@ -163,7 +163,7 @@ class _CustomModalBottomSheetState extends State<CustomModalBottomSheet> {
                       const SizedBox(height: 20),
                       const TitleText(text: "DISTANCE FROM"),
                       const SizedBox(height: 10),
-                      const Divider(),
+                      const Divider(thickness: 1),
                       const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hotelsgo/widgets/custom_modal_bottom_sheet.dart';
+import 'package:hotelsgo/widgets/filters_modal_bottom_sheet.dart';
 import 'package:hotelsgo/widgets/hotel_card.dart';
+import 'package:hotelsgo/widgets/sort_modal_bottom_sheet.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -28,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.white,
           title: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             GestureDetector(
-              onTap: () => showModalBottomSheet<void>(context: context, builder: (BuildContext context) => const CustomModalBottomSheet()),
+              onTap: () => showModalBottomSheet<void>(context: context, builder: (BuildContext context) => const FiltersModalBottomSheet()),
               child: Row(children: [
                 Image.asset("assets/images/parameters.png", height: 25, width: 25, color: Colors.cyan[900]),
                 const SizedBox(width: 5),
@@ -36,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ]),
             ),
             GestureDetector(
+              onTap: () => showModalBottomSheet<void>(context: context, builder: (BuildContext context) => const SortModalBottomSheet()),
               child: Row(children: [
                 Image.asset("assets/images/sort.png", height: 25, width: 25, color: Colors.cyan[900]),
                 const SizedBox(width: 5),
