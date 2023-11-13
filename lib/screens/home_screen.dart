@@ -34,9 +34,32 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(children: [
               Image.asset("assets/images/sort.png", height: 25, width: 25, color: Colors.cyan[900]),
               const SizedBox(width: 5),
-              Text("Filters", style: textTheme.titleMedium!.copyWith(color: Colors.cyan[900]))
+              Text("Sort", style: textTheme.titleMedium!.copyWith(color: Colors.cyan[900]))
             ])
           ])),
+      floatingActionButton: Align(
+        alignment: Alignment.bottomCenter,
+        child: Stack(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white,
+                  boxShadow: const [BoxShadow(blurRadius: 10, offset: Offset(-1, -1), color: Colors.black26)]),
+              child: Image.asset("assets/images/maps.png", height: 60, width: 150, fit: BoxFit.fill),
+            ),
+            Positioned(
+              bottom: 10,
+              right: 40,
+              child: Chip(
+                label: const Text("Map", style: TextStyle(color: Colors.white)),
+                backgroundColor: Theme.of(context).colorScheme.secondary.withAlpha(200),
+              ),
+            )
+          ],
+        ),
+      ),
       body: SafeArea(
           child: FutureBuilder(
               future: getData(),
