@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
           child: FutureBuilder(
               future: getData(),
-              builder: (ctx, dataSnapshot) {
+              builder: (_, dataSnapshot) {
                 if (dataSnapshot.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
                 }

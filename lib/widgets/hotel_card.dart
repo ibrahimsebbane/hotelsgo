@@ -88,7 +88,7 @@ class HotelCard extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 100, // Todo: avoid using width
+                      height: 100,
                       child: Container(
                         margin: const EdgeInsets.symmetric(horizontal: 10),
                         padding: const EdgeInsets.all(2),
@@ -168,7 +168,6 @@ class HotelCard extends StatelessWidget {
                 child: Hero(
                   tag: 1,
                   child: FadeInImage(
-                    // placeholder: AssetImage('assets/images/store-placeholder.png'),
                     placeholder: const AssetImage('assets/images/hotel.png'),
                     image: NetworkImage(link),
                     fit: BoxFit.fill,
